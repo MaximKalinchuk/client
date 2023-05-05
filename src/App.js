@@ -1,22 +1,21 @@
-import './App.css';
-import Auth from './Auth';
+import "./App.css";
+import AuthPage from "./pages/AuthPage";
+import NestIco from "./img/NestIco";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <div className="App">
-      <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      <Auth />
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
-</div>
+    <div className="App ">
+      <header>
+        <a href="/">Главная</a>
+        <br />
+        <a href="auth">Авторизироваться</a>
+      </header>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/auth" element={<AuthPage />} />
+      </Routes>
     </div>
   );
 }
