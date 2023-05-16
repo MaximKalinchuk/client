@@ -1,17 +1,13 @@
 import "./App.css";
 import AuthPage from "./pages/AuthPage";
-import NestIco from "./img/NestIco";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App ">
-      <header>
-        <a href="/">Главная</a>
-        <br />
-        <a href="auth">Авторизироваться</a>
-      </header>
+    <div class="App container" style={{ maxWidth: "1100px" }}>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<AuthPage />} />
